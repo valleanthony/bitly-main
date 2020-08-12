@@ -5,6 +5,10 @@ RUN mvn -f /usr/src/app/pom.xml clean package
 
 FROM openjdk:8-jdk-alpine
 RUN ls
+RUN ls
+RUN cd usr
+RUN cd src
+RUN cd app
+RUN pwd ls
 COPY target/*.jar /usr/src/app
-RUN ls 
 ENTRYPOINT ["java","-jar","/home.jar"]
